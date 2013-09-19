@@ -7,7 +7,7 @@ Version: 3.0
 Author: Osclass team
 Author URI: http://www.osclass.org/
 Widgets: header,footer
-Theme update URI: 
+Theme update URI: modern
 */
 
     function modern_theme_info() {
