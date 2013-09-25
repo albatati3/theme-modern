@@ -3,7 +3,7 @@
 Theme Name: Osclass Modern Theme
 Theme URI: http://www.osclass.org/
 Description: This is the Osclass modern theme
-Version: 3.0
+Version: 3.0.2
 Author: Osclass team
 Author URI: http://www.osclass.org/
 Widgets: header,footer
@@ -13,7 +13,7 @@ Theme update URI: modern
     function modern_theme_info() {
         return array(
              'name'        => 'Osclass Modern Theme'
-            ,'version'     => '3.0'
+            ,'version'     => '3.0.2'
             ,'description' => 'This is the Osclass modern theme'
             ,'author_name' => 'Osclass Team'
             ,'author_url'  => 'http://osclass.org'

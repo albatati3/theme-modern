@@ -32,6 +32,15 @@
         <?php ItemForm::location_javascript_new(); ?>
         <?php if(osc_images_enabled_at_items()) ItemForm::photos_javascript(); ?>
         <script type="text/javascript">
+            $(document).ready(function(){
+                $('body').on("created", '[name^="select_"]',function(evt) {
+                    $(this).uniform();
+                });
+                $('body').on("removed", '[name^="select_"]',function(evt) {
+                    $(this).parent().remove();
+                });
+            });
+
             function uniform_input_file(){
                 photos_div = $('div.photos');
                 $('div',photos_div).each(

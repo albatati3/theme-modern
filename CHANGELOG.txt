@@ -1,0 +1,7 @@
+Modern theme 3.0.2 2013-09-25
+------------------------
+- Fixed category dropdown issues when edit listings.
+
+Modern theme 3.0.1 2013-09-19
+------------------------
+- Fixed datepicker issues (added php-date library)
