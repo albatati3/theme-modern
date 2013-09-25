@@ -19,7 +19,9 @@
      * License along with this program.  If not, see <http://www.gnu.org/licenses/>.
      */
 
-    define('MODERN_THEME_VERSION', '3.0');
+    define('MODERN_THEME_VERSION', '3.0.1');
+
+    osc_enqueue_script('php-date');
 
     if( !OC_ADMIN ) {
         if( !function_exists('add_close_button_action') ) {
