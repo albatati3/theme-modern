@@ -30,7 +30,12 @@
 
         <!-- only item-edit.php -->
         <?php ItemForm::location_javascript_new(); ?>
-        <?php if(osc_images_enabled_at_items()) ItemForm::photos_javascript(); ?>
+        <?php
+		    if(osc_images_enabled_at_items() && !modern_is_fineuploader())
+		    {
+			    ItemForm::photos_javascript();
+		    }
+		?>
         <script type="text/javascript">
             $(document).ready(function(){
                 $('body').on("created", '[name^="select_"]',function(evt) {
@@ -127,8 +132,13 @@
                             </div>
                             <?php } ?>
                         </div>
-                        <?php if( osc_images_enabled_at_items() ) { ?>
                         <div class="box photos">
+						    <?php if(osc_images_enabled_at_items()) {
+					            if(modern_is_fineuploader()) {
+						            // new ajax photo upload 
+							        ItemForm::ajax_photos();
+						        }
+					        else { ?>
                             <h2><?php _e('Photos', 'modern'); ?></h2>
                             <?php ItemForm::photos(); ?>
                             <div id="photos">
@@ -139,8 +149,8 @@
                                 <?php }; ?>
                             </div>
                             <a href="#" onclick="addNewPhoto(); uniform_input_file(); return false;"><?php _e('Add new photo', 'modern'); ?></a>
+                            <?php } } ?>
                         </div>
-                        <?php } ?>
 
                         <div class="box location">
                             <h2><?php _e('Location', 'modern'); ?></h2>
