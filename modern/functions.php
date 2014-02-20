@@ -79,6 +79,18 @@
             break;
         }
     }
+    
+    if(modern_is_fineuploader()) {
+		if(!OC_ADMIN) {
+		    osc_enqueue_style('fine-uploader-css', osc_assets_url('js/fineuploader/fineuploader.css'));
+	    }
+	    osc_enqueue_script('jquery-fineuploader');
+    }
+	
+	function modern_is_fineuploader() {
+	    return Scripts::newInstance()->registered['jquery-fineuploader'] && method_exists('ItemForm', 'ajax_photos');
+    }
+    
     osc_add_hook('init_admin', 'theme_modern_actions_admin');
     osc_admin_menu_appearance(__('Header logo', 'modern'), osc_admin_render_theme_url('oc-content/themes/modern/admin/header.php'), 'header_modern');
     osc_admin_menu_appearance(__('Theme settings', 'modern'), osc_admin_render_theme_url('oc-content/themes/modern/admin/settings.php'), 'settings_modern');
