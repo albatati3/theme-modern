@@ -1,3 +1,8 @@
+### v3.0.3 - 20/01/2015
+
+* Added support for highlight listings
+
+
 Modern theme 3.0.2 2013-09-25
 ------------------------
 - Fixed category dropdown issues when edit listings.
